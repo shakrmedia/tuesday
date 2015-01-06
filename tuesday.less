@@ -1,0 +1,202 @@
+/* ==================================== */
+/* ==== tuesday.less ================== */
+/* ==== Shakr CSS Animation Library === */
+/* ==================================== */
+
+@easeOutCirc: cubic-bezier(0, 0.590, 0.375, 1);
+
+.animated {
+	animation-duration: 0.3s;
+	animation-fill-mode: both;
+}
+.animated.infinite {
+	animation-iteration-count: infinite;
+}
+
+
+/* Fading Entrances */
+@keyframes shakrFadeInDown{
+	0% { 
+		opacity: 0;
+		transform: translateY(-10px);
+		animation-timing-function: @easeOutCirc;
+    }
+
+	100% { 
+		opacity: 1;
+		transform: translateY(0);
+    }
+}
+
+@keyframes shakrFadeInLeft{
+	0% { 
+		opacity: 0;
+		transform: translateX(10px);
+		animation-timing-function: @easeOutCirc;
+    }
+
+	100% { 
+		opacity: 1;
+		transform: translateX(0);
+    }
+}
+
+@keyframes shakrFadeInUp{
+	0% { 
+		opacity: 0;
+		transform: translateY(10px);
+		animation-timing-function: @easeOutCirc;
+    }
+
+	100% { 
+		opacity: 1;
+		transform: translateY(0);
+    }
+}
+
+@keyframes shakrFadeInRight{
+	0% { 
+		opacity: 0;
+		transform: translateX(-10px);
+		animation-timing-function: @easeOutCirc;
+    }
+
+	100% { 
+		opacity: 1;
+		transform: translateX(0);
+    }
+}
+
+.shakrFadeInDown{
+	animation-name: shakrFadeInDown;
+}
+.shakrFadeInLeft{
+	animation-name: shakrFadeInLeft;
+}
+.shakrFadeInUp{
+	animation-name: shakrFadeInUp;
+}
+.shakrFadeInRight{
+	animation-name: shakrFadeInRight;
+}
+
+
+/* Fading Exits */
+@keyframes shakrFadeOutDown{
+	0% { 
+		opacity: 1;
+		transform: translateY(0);
+		animation-timing-function: @easeOutCirc;
+    }
+
+	100% { 
+		opacity: 0;
+		transform: translateY(-10px);
+    }
+}
+
+@keyframes shakrFadeOutLeft{
+	0% { 
+		opacity: 1;
+		transform: translateX(0);
+		animation-timing-function: @easeOutCirc;
+    }
+
+	100% { 
+		opacity: 0;
+		transform: translateX(10px);
+    }
+}
+
+@keyframes shakrFadeOutUp{
+	0% { 
+		opacity: 1;
+		transform: translateY(0);
+		animation-timing-function: @easeOutCirc;
+    }
+
+	100% { 
+		opacity: 0;
+		transform: translateY(10px);
+    }
+}
+
+@keyframes shakrFadeOutRight{
+	0% { 
+		opacity: 1;
+		transform: translateX(0);
+		animation-timing-function: @easeOutCirc;
+    }
+
+	100% { 
+		opacity: 0;
+		transform: translateX(-10px);
+    }
+}
+
+.shakrFadeOutDown{
+	animation-name: shakrFadeOutDown;
+}
+.shakrFadeOutLeft{
+	animation-name: shakrFadeOutLeft;
+}
+.shakrFadeOutUp{
+	animation-name: shakrFadeOutUp;
+}
+.shakrFadeOutRight{
+	animation-name: shakrFadeOutRight;
+}
+
+
+/* Hinge Flip */
+@keyframes shakrHingeFlipIn {
+	0% { 
+		opacity: 0;
+		transform: perspective(600px) rotateX(0deg);
+		transform-origin: center top;
+		animation-timing-function: @easeOutCirc;
+    }
+    
+    50% {
+		transform: perspective(600px) rotateX(-10deg);
+		transform-origin: center top;
+		animation-timing-function: ease-in;
+    }
+
+	100% { 
+		opacity: 1;
+		transform: perspective(600px) rotateX(0deg);
+		transform-origin: center top;
+		animation-timing-function: ease-out;
+    }
+}
+
+.shakrHingeFlipIn {
+	animation-name: shakrHingeFlipIn;
+}
+
+@keyframes shakrHingeFlipOut {
+	0% { 
+		opacity: 1;
+		transform: perspective(600px) rotateX(0deg);
+		transform-origin: center top;
+		animation-timing-function: @easeOutCirc;
+    }
+	
+    50% {
+		transform: perspective(600px) rotateX(-10deg);
+		transform-origin: center top;
+		animation-timing-function: ease-in;
+    }
+
+    100% { 
+		opacity: 0;
+		transform: perspective(600px) rotateX(0deg);
+		transform-origin: center top;
+		animation-timing-function: ease-out;
+    }
+}
+
+.shakrHingeFlipOut {
+	animation-name: shakrHingeFlipOut;
+}
