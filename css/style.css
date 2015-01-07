@@ -88,6 +88,7 @@ select.animationlist {
   line-height: 22px;
   vertical-align: top;
   font-size: 1rem;
+  border-radius: 0;
 }
 select.animationlist:focus {
   box-shadow: 0 0 0 2px #b2cf65 inset;
@@ -128,7 +129,8 @@ button {
   letter-spacing: 2px;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0) inset;
   border-radius: 0;
-  transition: 0.2s background, 0.2s box-shadow;
+  -webkit-transition: 0.2s background, 0.2s box-shadow;
+          transition: 0.2s background, 0.2s box-shadow;
   white-space: pre;
 }
 button:hover {
@@ -166,7 +168,8 @@ button.disabled:focus {
   background: #eee;
   width: 400px;
   height: 100px;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   padding: 15px 20px;
   border-radius: 3px;
   margin: 0;
@@ -180,7 +183,8 @@ button.disabled:focus {
   background: #eee;
   width: 400px;
   height: 100px;
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
   padding: 15px 20px;
   border-radius: 3px;
   margin: 0;
