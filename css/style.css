@@ -54,8 +54,15 @@ body {
 h1 {
   font-size: 4em;
   font-weight: 900;
-  margin: 30px 0;
+  margin: 30px 0 0 0;
   font-style: italic;
+  -webkit-animation-duration: 0.5s !important;
+          animation-duration: 0.5s !important;
+}
+p.subheader {
+  font-size: 1.2rem;
+  margin: 10px 0 30px 0;
+  color: #666;
 }
 h2 {
   margin: 0 0 15px 0;
