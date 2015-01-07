@@ -34,15 +34,25 @@ input, select, button, textarea {
 	.font-default;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,h2,h3,h4,h5,h6,p {
 	margin: 0;
 	padding: 0;
+}
+
+a {
+	color: @green-d2;
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 html {
 	margin: 0;
 	padding: 0;
 	width: 100%;
+	height: 100%;
 	font-size: 85%;
 }
 
@@ -52,6 +62,7 @@ body {
 	width: 100%;
 	height: 100%;
 	.font-default;
+	display: table;
 }
 
 /* main style start */
@@ -60,12 +71,14 @@ body {
 	text-align: center;
 	position: relative;
 	padding: 20px 0;
+	vertical-align: middle;
+	display: table-cell;
 }
 
 h1 {
 	font-size: 4em;
 	font-weight: 900;
-	margin: 20px 0;
+	margin: 30px 0;
 	font-style: italic;
 }
 
@@ -76,7 +89,7 @@ h2 {
 .container {
 	position: relative;
 	display: inline-block;
-	width: 420px;
+	width: 400px;
 	height: 240px;
 	padding: 20px 30px 40px 30px;
 	margin: 0 auto 10px auto;
@@ -158,7 +171,7 @@ button {
 
 	&:active {
 		text-decoration: none;
-		background-color: @green-d2;
+		background-color: @green-d3;
 		color: #fff;
 		box-shadow: 0 0 0 2px rgba(255,255,255,0.3) inset;
 	}
@@ -170,8 +183,8 @@ button {
 	}
 
 	&.disabled {
-		background: #666;
-		color: #aaa;
+		background: #aaa;
+		color: #fff;
 		pointer-events: none;
 
 		&:hover, &:active, &:focus {
@@ -185,11 +198,12 @@ button {
 
 .target {
 	position: absolute;
-	bottom: 20px;
+	bottom: 50px;
 	background: #eee;
 	width: 400px;
 	height: 100px;
-	padding: 10px;
+	box-sizing: border-box;
+	padding: 15px 20px;
 	border-radius: 3px;
 	margin: 0;
 	text-align: center;
@@ -205,6 +219,21 @@ button {
 
 .hidden {
 	display: none;
+}
+
+.credits {
+	color: #999;
+	margin: 10px 0;
+
+	.shakr-logo {
+		display: block;
+		width: 48px;
+		height: 48px;
+		margin: 0 auto;
+		background: url('../images/shakr-feathers.svg') no-repeat center center;
+		background-size: 48px 48px;
+	}
+
 }
 
 .container.entrances .target {
