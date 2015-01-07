@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<!-- Tuesday Demo Page -->
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/tuesday.css" />
+
+		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="page">
+			<div class="container entrances">
+				<h3>Entrances</h3>
+				
+				<form>
+					<select class="animationlist">
+						<optgroup label="Drop In">
+							<option value="shakrDropInLeft">shakrDropInLeft</option>
+							<option value="shakrDropInRight">shakrDropInRight</option>
+						</optgroup>
+						<optgroup label="FadeIn">
+							<option value="shakrFadeInDown">shakrFadeInDown</option>
+							<option value="shakrFadeInLeft">shakrFadeInLeft</option>
+							<option value="shakrFadeInUp">shakrFadeInUp</option>
+							<option value="shakrFadeInRight">shakrFadeInRight</option>
+						</optgroup>
+						<optgroup label="HingeFlip">
+							<option value="shakrHingeFlipIn">shakrHingeFlipIn</option>
+						</optgroup>
+					</select>
+				</form>
+
+				<div class="button-row">
+					<div class="button animate"><span class="toggletext">Animate</span><span class="animatingtext">Animated!</span></div>
+					<div class="button reset"><span class="toggletext">Reset</span><span class="animatingtext">Animating...</span></div>
+				</div>
+
+				<div class="object">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eveniet unde magnam sequi, iusto, amet iste necessitatibus, impedit nam reiciendis quae corrupti earum quia similique eius aut cupclassitate ipsa et.
+				</div>
+				
+				<div class="guide"></div>
+			</div>
+			
+			<div class="container exits">
+				<h3>Exits</h3>
+
+				<form>
+					<select class="animationlist">
+						<optgroup label="FadeOut">
+							<option value="shakrFadeOutDown">shakrFadeOutDown</option>
+							<option value="shakrFadeOutLeft">shakrFadeOutLeft</option>
+							<option value="shakrFadeOutUp">shakrFadeOutUp</option>
+							<option value="shakrFadeOutRight">shakrFadeOutRight</option>
+						</optgroup>
+						<optgroup label="HingeFlip">
+							<option value="shakrHingeFlipOut">shakrHingeFlipOut</option>
+						</optgroup>
+					</select>
+				</form>
+
+				<div class="button-row">
+					<div class="button animate"><span class="toggletext">Animate</span><span class="animatingtext">Animated!</span></div>
+					<div class="button reset"><span class="toggletext">Reset</span><span class="animatingtext">Animating...</span></div>
+				</div>
+
+				<div class="object">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eveniet unde magnam sequi, iusto, amet iste necessitatibus, impedit nam reiciendis quae corrupti earum quia similique eius aut cupclassitate ipsa et.
+				</div>
+				
+				<div class="guide"></div>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+
+			$('.button.animate').click(function() {
+				var that = this;
+				var container = $(that).parents('.container');
+				
+				var currentAnimation = container.find('.animationlist').val();
+				console.log(currentAnimation);
+				
+				$(that).addClass('disabled'); container.children('.object').addClass('animated '+currentAnimation);
+			});
+
+			$(document).ready(function(){
+					$('.animationlist').change(function(){
+						
+						var container = $(this).parents('.container');
+						
+						container.find('.button.animate').removeClass('disabled');
+						container.find('.object').attr('class', '').addClass('object');
+					});
+			});
+
+			$('.button.reset').click(function() {
+				var that = this;
+				var container = $(that).parents('.container');
+				
+				container.find('.button.animate').removeClass('disabled');
+				container.find('.object').attr('class', '').addClass('object');
+			});
+
+		</script>
+
+	</body>
+</html>
