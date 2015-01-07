@@ -1,4 +1,4 @@
-@import url('http://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('http://fonts.googleapis.com/css?family=Lato:400,900italic,700');
 
 
 @red: #f05a67;
@@ -13,7 +13,8 @@
 @blue-d2: darken(@blue,20%);
 
 @green: #b2cf65;
-@green-d1: #889f2e;
+@green-l1: lighten(@green,10%);
+@green-d1: darken(@green,10%);
 @green-d2: darken(@green,10%);
 @green-d3: darken(@green,20%);
 
@@ -23,26 +24,53 @@
 @yellow-d1: darken(@yellow,10%);
 @yellow-d2: darken(@yellow,20%);
 
+.font-default { 
+	font-family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif; 
+}
 
+input, select, button, textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	.font-default;
+}
 
-html, body {
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
+}
+
+html {
 	margin: 0;
 	padding: 0;
 	width: 100%;
-}
-
-body {
-	width: 100%;
-	height: 100%;
-	font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', sans-serif;
 	font-size: 85%;
 }
 
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	.font-default;
+}
+
+/* main style start */
 #page {
 	width: 100%;
 	text-align: center;
 	position: relative;
 	padding: 20px 0;
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: 900;
+	margin: 20px 0;
+	font-style: italic;
+}
+
+h2 { 
+	margin: 0 0 15px 0;
 }
 
 .container {
@@ -51,33 +79,66 @@ body {
 	width: 420px;
 	height: 240px;
 	padding: 20px 30px 40px 30px;
-	margin: 0 auto;
+	margin: 0 auto 10px auto;
 	text-align: center;
-	border: 1px solid #999;
-	
-	h3 {
-		margin: 0 0 10px 0;
-	}
+	border: 1px solid #ddd;
 }
 
 .button-row {
-	width: 400px;
+	width: 100%;
 	height: 50px;
 	margin: 0 auto;
 	text-align: center;
 }
-.button {
 
+select.animationlist {
+	width: 200px;
 	display: inline-block;
-	width: 120px;
-	font-size: 0.9rem;
+	height: 40px;
+	padding: 10px 15px;
+	margin: 0 5px 0 0;
+	background: url('../images/arrow-down.svg') no-repeat right center;
+	border: none;
+	box-shadow: 0 0 0 1px #aaa inset;
 	line-height: 22px;
-	font-weight: bold;
-	text-align: center;
+	vertical-align: top;
+	font-size: 1rem;
+
+	&:focus {
+		box-shadow: 0 0 0 2px @green inset;
+		text-decoration: none;
+		outline: none;
+	}
+
+	optgroup {
+		.font-default;
+		padding: 5px 0;
+		text-indent: 5px;
+		border-bottom: 1px solid #aaa;
+		&:last-child {
+			border: none;
+		}
+	}
+	option {
+		.font-default;
+		padding: 5px;
+		text-indent: 12px;
+	}
+}
+
+button {
+	display: inline-block;
+	vertical-align: top;
+	width: 150px;
+	height: 40px;
 	padding: 6px 15px;
 	margin: 0 5px 10px 0;
 	border: none;
-	background: @blue-d1;
+	background: @green-d1;
+	font-size: 1rem;
+	font-weight: bold;
+	line-height: 22px;
+	text-align: center;
 	color: #fff;
 	text-decoration: none;
 	cursor: pointer;
@@ -91,28 +152,21 @@ body {
 	&:hover {
 		text-decoration: none;
 		box-shadow: 0 0 0 2px rgba(255,255,255,0.5) inset;
-		background-color: @blue;
+		background-color: @green;
 		color: #fff;
 	}
 
 	&:active {
 		text-decoration: none;
-		background-color: @blue-d2;
+		background-color: @green-d2;
 		color: #fff;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.3) inset;		
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.3) inset;
 	}
 
 	&:focus {
 		text-decoration: none;
 		outline: none;
 		color: #fff;
-	}
-
-	span.toggletext {
-		display: block;
-	}
-	span.animatingtext {
-		display: none;
 	}
 
 	&.disabled {
@@ -124,13 +178,6 @@ body {
 			background: #666;
 			box-shadow: none;
 			border: none;
-		}
-
-		span.toggletext {
-			display: none;
-		}
-		span.animatingtext {
-			display: block;
 		}
 	}
 
@@ -146,30 +193,20 @@ body {
 	border-radius: 3px;
 	margin: 0;
 	text-align: center;
+	font-size: 1rem;
 	color: #333;
 }
 
 .guide {
-	position: absolute;
+	.target;
 	opacity: 0.2;
-	bottom: 20px;
-	background: #eee;
 	border: 1px solid red;
-	width: 400px;
-	height: 100px;
-	padding: 10px;
-	border-radius: 3px;
-	margin: 0;
-	text-align: center;
-	color: #333;
 }
 
 .hidden {
 	display: none;
 }
 
-
-/* common properties */
 .container.entrances .target {
 	opacity: 0;
 }

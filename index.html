@@ -14,58 +14,58 @@
 	<body>
 
 		<div id="page">
+			<h1>It's Tuesday.</h1>
+
 			<div class="container entrances">
-				<h3>Entrances</h3>
-				
-				<form>
-					<select class="animationlist">
-						<optgroup label="Drop In">
-							<option value="shakrDropInLeft">shakrDropInLeft</option>
-							<option value="shakrDropInRight">shakrDropInRight</option>
-						</optgroup>
-						<optgroup label="FadeIn">
-							<option value="shakrFadeInDown">shakrFadeInDown</option>
-							<option value="shakrFadeInLeft">shakrFadeInLeft</option>
-							<option value="shakrFadeInUp">shakrFadeInUp</option>
-							<option value="shakrFadeInRight">shakrFadeInRight</option>
-						</optgroup>
-						<optgroup label="HingeFlip">
-							<option value="shakrHingeFlipIn">shakrHingeFlipIn</option>
-						</optgroup>
-					</select>
-				</form>
+				<h2>Entrances</h3>
 
 				<div class="button-row">
-					<div class="button animate">Animate</div>
-				
+					<form>
+						<select class="animationlist">
+							<optgroup label="DropIn">
+								<option value="shakrDropInLeft">shakrDropInLeft</option>
+								<option value="shakrDropInRight">shakrDropInRight</option>
+							</optgroup>
+							<optgroup label="FadeIn">
+								<option value="shakrFadeInDown">shakrFadeInDown</option>
+								<option value="shakrFadeInLeft">shakrFadeInLeft</option>
+								<option value="shakrFadeInUp">shakrFadeInUp</option>
+								<option value="shakrFadeInRight">shakrFadeInRight</option>
+							</optgroup>
+							<optgroup label="HingeFlip">
+								<option value="shakrHingeFlipIn">shakrHingeFlipIn</option>
+							</optgroup>
+						</select>
+					
+						<button class="button animate">Animate</button>
+					</form>
 				</div>
 
 				<div class="target">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eveniet unde magnam sequi, iusto, amet iste necessitatibus, impedit nam reiciendis quae corrupti earum quia similique eius aut cupclassitate ipsa et.
 				</div>
-				
 				<div class="guide"></div>
 			</div>
 
 			<div class="container exits">
-				<h3>Exits</h3>
-
-				<form>
-					<select class="animationlist">
-						<optgroup label="FadeOut">
-							<option value="shakrFadeOutDown">shakrFadeOutDown</option>
-							<option value="shakrFadeOutLeft">shakrFadeOutLeft</option>
-							<option value="shakrFadeOutUp">shakrFadeOutUp</option>
-							<option value="shakrFadeOutRight">shakrFadeOutRight</option>
-						</optgroup>
-						<optgroup label="HingeFlip">
-							<option value="shakrHingeFlipOut">shakrHingeFlipOut</option>
-						</optgroup>
-					</select>
-				</form>
+				<h2>Exits</h3>
 
 				<div class="button-row">
-					<div class="button animate">Animate</div>
+					<form>
+						<select class="animationlist">
+							<optgroup label="FadeOut">
+								<option value="shakrFadeOutDown">shakrFadeOutDown</option>
+								<option value="shakrFadeOutLeft">shakrFadeOutLeft</option>
+								<option value="shakrFadeOutUp">shakrFadeOutUp</option>
+								<option value="shakrFadeOutRight">shakrFadeOutRight</option>
+							</optgroup>
+							<optgroup label="HingeFlip">
+								<option value="shakrHingeFlipOut">shakrHingeFlipOut</option>
+							</optgroup>
+						</select>
+					
+						<button class="button animate">Animate</button>
+					</form>
 				</div>
 
 				<div class="target">
@@ -79,38 +79,40 @@
 
 
 		<script type="text/javascript">
+			$(document).ready(function(){
+				$('button').click(function(e) {
+					e.preventDefault();
 
-			$('.button').click(function() {
-				var that = this;
-				var container = $(that).parents('.container');
-				var currentAnimation = container.find('.animationlist').val();
-				var target = container.children('.target');
-				
-				if ($(that).is('.animate')) {
+					var that = this;
+					var container = $(that).parents('.container');
+					var currentAnimation = container.find('.animationlist').val();
+					var target = container.children('.target');
+					
+					if ($(that).is('.animate')) {
 
-					$(that).addClass('disabled').text('Animating...');
-						target.addClass('animated '+currentAnimation);
+						$(that).addClass('disabled').text('Animating...');
+							target.addClass('animated '+currentAnimation);
 
-						target.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
-						function(e) {
-							$(that).removeClass('disabled animate').addClass('reset').text('Reset');
-						});
+							target.one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+								$(that).removeClass('disabled animate').addClass('reset').text('Reset');
+							});
 
-				} else {
+					} else {
 
-					$(that).removeClass('reset').addClass('animate').text('Animate');
-					target.attr('class', '').addClass('target');
+						$(that).removeClass('reset').addClass('animate').text('Animate');
+						target.attr('class', '').addClass('target');
 
-				}
-				
-			});
+					}
+					
+				});
 
-			$('.animationlist').change(function(){
-				var that = this;
-				var container = $(that).parents('.container');
-				
-				container.find('.button').attr('class', '').addClass('button animate').text('Animate');
-				container.children('.target').attr('class', '').addClass('target');
+				$('.animationlist').change(function(){
+					var that = this;
+					var container = $(that).parents('.container');
+					
+					container.find('button').attr('class', '').addClass('animate').text('Animate');
+					container.children('.target').attr('class', '').addClass('target');
+				});
 			});
 
 
