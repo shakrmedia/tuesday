@@ -1,7 +1,29 @@
-/* base for animation sandbox */
-@green: #9aba44;
+@import url('http://fonts.googleapis.com/css?family=Raleway:400,700');
+
+
+@red: #f05a67;
+@red-l1: #f69c97;
+@red-d1: #d3505a;
+@red-d2: darken(@red-d1,10%);
+
+@blue: #30a4dc;
+@blue-l1: lighten(@blue,10%);
+@blue-l2: lighten(@blue,20%);
+@blue-d1: darken(@blue,10%);
+@blue-d2: darken(@blue,20%);
+
+@green: #b2cf65;
 @green-d1: #889f2e;
-@green-d2: darken(@green-d1, 10%);
+@green-d2: darken(@green,10%);
+@green-d3: darken(@green,20%);
+
+@yellow: #ecd05d;
+@yellow-l1: lighten(@yellow,10%);
+@yellow-l2: lighten(@yellow,20%);
+@yellow-d1: darken(@yellow,10%);
+@yellow-d2: darken(@yellow,20%);
+
+
 
 html, body {
 	margin: 0;
@@ -12,7 +34,8 @@ html, body {
 body {
 	width: 100%;
 	height: 100%;
-	font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', sans-serif;
+	font-size: 85%;
 }
 
 #page {
@@ -44,24 +67,47 @@ body {
 	text-align: center;
 }
 .button {
+
 	display: inline-block;
 	width: 120px;
-	height: 20px;
-	background-color: #9aba44;
-	margin: 10px auto;
-	padding: 5px 10px;
-	border-radius: 3px;
+	font-size: 0.9rem;
+	line-height: 22px;
+	font-weight: bold;
 	text-align: center;
-	cursor: pointer;  
+	padding: 6px 15px;
+	margin: 0 5px 10px 0;
+	border: none;
+	background: @blue-d1;
 	color: #fff;
-	transition: background-color 0.2s, transform 0.2s;
+	text-decoration: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	box-shadow: 0 0 0 2px rgba(255,255,255,0) inset;
+	border-radius: 0;
+	transition: 0.2s background, 0.2s box-shadow;
+	white-space: pre;
 
 	&:hover {
-		background-color: #889f2e;
+		text-decoration: none;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.5) inset;
+		background-color: @blue;
+		color: #fff;
 	}
+
 	&:active {
-		background-color: @green-d2;
+		text-decoration: none;
+		background-color: @blue-d2;
+		color: #fff;
+		box-shadow: 0 0 0 2px rgba(255,255,255,0.3) inset;		
 	}
+
+	&:focus {
+		text-decoration: none;
+		outline: none;
+		color: #fff;
+	}
+
 	span.toggletext {
 		display: block;
 	}
@@ -70,11 +116,16 @@ body {
 	}
 
 	&.disabled {
-		background-color: #aaa;
+		background: #666;
+		color: #aaa;
 		pointer-events: none;
-		&:hover, &:active {
-			background-color: #aaa;
+
+		&:hover, &:active, &:focus {
+			background: #666;
+			box-shadow: none;
+			border: none;
 		}
+
 		span.toggletext {
 			display: none;
 		}
@@ -82,9 +133,10 @@ body {
 			display: block;
 		}
 	}
+
 }
 
-.object {
+.target {
 	position: absolute;
 	bottom: 20px;
 	background: #eee;
@@ -118,10 +170,10 @@ body {
 
 
 /* common properties */
-.container.entrances .object {
+.container.entrances .target {
 	opacity: 0;
 }
-.container.exits .object.animated {
+.container.exits .target.animated {
 	opacity: 0;
 }
 

@@ -1,4 +1,4 @@
-/* base for animation sandbox */
+@import url('http://fonts.googleapis.com/css?family=Raleway:400,700');
 html,
 body {
   margin: 0;
@@ -8,7 +8,8 @@ body {
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-family: 'Raleway', 'Helvetica Neue', 'Helvetica', sans-serif;
+  font-size: 85%;
 }
 #page {
   width: 100%;
@@ -38,22 +39,40 @@ body {
 .button {
   display: inline-block;
   width: 120px;
-  height: 20px;
-  background-color: #9aba44;
-  margin: 10px auto;
-  padding: 5px 10px;
-  border-radius: 3px;
+  font-size: 0.9rem;
+  line-height: 22px;
+  font-weight: bold;
   text-align: center;
-  cursor: pointer;
+  padding: 6px 15px;
+  margin: 0 5px 10px 0;
+  border: none;
+  background: #1f87ba;
   color: #fff;
-  -webkit-transition: background-color 0.2s, -webkit-transform 0.2s;
-          transition: background-color 0.2s, transform 0.2s;
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0) inset;
+  border-radius: 0;
+  transition: 0.2s background, 0.2s box-shadow;
+  white-space: pre;
 }
 .button:hover {
-  background-color: #889f2e;
+  text-decoration: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5) inset;
+  background-color: #30a4dc;
+  color: #fff;
 }
 .button:active {
-  background-color: #667723;
+  text-decoration: none;
+  background-color: #18688e;
+  color: #fff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3) inset;
+}
+.button:focus {
+  text-decoration: none;
+  outline: none;
+  color: #fff;
 }
 .button span.toggletext {
   display: block;
@@ -62,12 +81,16 @@ body {
   display: none;
 }
 .button.disabled {
-  background-color: #aaa;
+  background: #666;
+  color: #aaa;
   pointer-events: none;
 }
 .button.disabled:hover,
-.button.disabled:active {
-  background-color: #aaa;
+.button.disabled:active,
+.button.disabled:focus {
+  background: #666;
+  box-shadow: none;
+  border: none;
 }
 .button.disabled span.toggletext {
   display: none;
@@ -75,7 +98,7 @@ body {
 .button.disabled span.animatingtext {
   display: block;
 }
-.object {
+.target {
   position: absolute;
   bottom: 20px;
   background: #eee;
@@ -105,10 +128,10 @@ body {
   display: none;
 }
 /* common properties */
-.container.entrances .object {
+.container.entrances .target {
   opacity: 0;
 }
-.container.exits .object.animated {
+.container.exits .target.animated {
   opacity: 0;
 }
 /* set animations */

@@ -36,17 +36,17 @@
 				</form>
 
 				<div class="button-row">
-					<div class="button animate"><span class="toggletext">Animate</span><span class="animatingtext">Animated!</span></div>
-					<div class="button reset"><span class="toggletext">Reset</span><span class="animatingtext">Animating...</span></div>
+					<div class="button animate">Animate</div>
+				
 				</div>
 
-				<div class="object">
+				<div class="target">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eveniet unde magnam sequi, iusto, amet iste necessitatibus, impedit nam reiciendis quae corrupti earum quia similique eius aut cupclassitate ipsa et.
 				</div>
 				
 				<div class="guide"></div>
 			</div>
-			
+
 			<div class="container exits">
 				<h3>Exits</h3>
 
@@ -65,47 +65,55 @@
 				</form>
 
 				<div class="button-row">
-					<div class="button animate"><span class="toggletext">Animate</span><span class="animatingtext">Animated!</span></div>
-					<div class="button reset"><span class="toggletext">Reset</span><span class="animatingtext">Animating...</span></div>
+					<div class="button animate">Animate</div>
 				</div>
 
-				<div class="object">
+				<div class="target">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus eveniet unde magnam sequi, iusto, amet iste necessitatibus, impedit nam reiciendis quae corrupti earum quia similique eius aut cupclassitate ipsa et.
 				</div>
 				
 				<div class="guide"></div>
 			</div>
+
 		</div>
+
 
 		<script type="text/javascript">
 
-			$('.button.animate').click(function() {
+			$('.button').click(function() {
 				var that = this;
 				var container = $(that).parents('.container');
-				
 				var currentAnimation = container.find('.animationlist').val();
-				console.log(currentAnimation);
+				var target = container.children('.target');
 				
-				$(that).addClass('disabled'); container.children('.object').addClass('animated '+currentAnimation);
+				if ($(that).is('.animate')) {
+
+					$(that).addClass('disabled').text('Animating...');
+						target.addClass('animated '+currentAnimation);
+
+						target.one('webkitAnimationEnd oanimationend msAnimationEnd animationend',
+						function(e) {
+							$(that).removeClass('disabled animate').addClass('reset').text('Reset');
+						});
+
+				} else {
+
+					$(that).removeClass('reset').addClass('animate').text('Animate');
+					target.attr('class', '').addClass('target');
+
+				}
+				
 			});
 
-			$(document).ready(function(){
-					$('.animationlist').change(function(){
-						
-						var container = $(this).parents('.container');
-						
-						container.find('.button.animate').removeClass('disabled');
-						container.find('.object').attr('class', '').addClass('object');
-					});
-			});
-
-			$('.button.reset').click(function() {
+			$('.animationlist').change(function(){
 				var that = this;
 				var container = $(that).parents('.container');
 				
-				container.find('.button.animate').removeClass('disabled');
-				container.find('.object').attr('class', '').addClass('object');
+				container.find('.button').attr('class', '').addClass('button animate').text('Animate');
+				container.children('.target').attr('class', '').addClass('target');
 			});
+
+
 
 		</script>
 
