@@ -2,7 +2,7 @@ Tuesday
 =======
 
 #### What is it? 
-It's a custom CSS/LESS animation library for Shakr.
+It's a custom CSS animation library for Shakr.
 
 #### Why 'Tuesday'?
 Because it's Tuesday. You may want to ask @hellodeibu for that.
@@ -24,22 +24,28 @@ You can use Tuesday as an addon to the Animate.css library, but it doesn't have 
 
 ## Animation List
 
-All animation names start with `shakr` prefix. Naming conventions follow that of the [Animate.css](http://daneden.github.io/animate.css/): `shakr`+`Name`+`In/Out`+`Direction`
+All animation names start with `td` prefix. Naming conventions follow that of the [Animate.css](http://daneden.github.io/animate.css/): `td`+`Name`+`In/Out`+`Direction`
 
 More animations are to be added.
 
-#### Fading Entrances
-- shakrFadeInDown
-- shakrFadeInLeft
-- shakrFadeInUp
-- shakrFadeInRight
+#### DropIn
+- tdFadeInDown
+- tdFadeInLeft
+- tdFadeInUp
+- tdFadeInRight
 
-#### Fading Exits
-- shakrFadeOutDown
-- shakrFadeOutLeft
-- shakrFadeOutUp
-- shakrFadeOutRight
+#### FadeIn
+- tdFadeInDown
+- tdFadeInLeft
+- tdFadeInUp
+- tdFadeInRight
 
-#### Hinge Flip
-- shakrHingeFlipIn
-- shakrHingeFlipOut
+#### FadeOut
+- tdFadeOutDown
+- tdFadeOutLeft
+- tdFadeOutUp
+- tdFadeOutRight
+
+#### HingeFlip
+- tdHingeFlipIn
+- tdHingeFlipOut
