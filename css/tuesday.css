@@ -1,7 +1,7 @@
-/* ==================================== */
-/* ==== tuesday.less ================== */
-/* ==== Shakr CSS Animation Library === */
-/* ==================================== */
+/* ======================================== */
+/* ==== tuesday.less ====================== */
+/* ==== A quirky CSS Animation Library ==== */
+/* ======================================== */
 .animated {
   -webkit-animation-duration: 0.3s;
           animation-duration: 0.3s;
@@ -13,7 +13,7 @@
           animation-iteration-count: infinite;
 }
 /* Fading Entrances */
-@-webkit-keyframes shakrFadeInDown {
+@-webkit-keyframes tdFadeInDown {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-10px);
@@ -27,7 +27,7 @@
             transform: translateY(0);
   }
 }
-@keyframes shakrFadeInDown {
+@keyframes tdFadeInDown {
   0% {
     opacity: 0;
     -webkit-transform: translateY(-10px);
@@ -41,7 +41,7 @@
             transform: translateY(0);
   }
 }
-@-webkit-keyframes shakrFadeInLeft {
+@-webkit-keyframes tdFadeInLeft {
   0% {
     opacity: 0;
     -webkit-transform: translateX(10px);
@@ -55,7 +55,7 @@
             transform: translateX(0);
   }
 }
-@keyframes shakrFadeInLeft {
+@keyframes tdFadeInLeft {
   0% {
     opacity: 0;
     -webkit-transform: translateX(10px);
@@ -69,7 +69,7 @@
             transform: translateX(0);
   }
 }
-@-webkit-keyframes shakrFadeInUp {
+@-webkit-keyframes tdFadeInUp {
   0% {
     opacity: 0;
     -webkit-transform: translateY(10px);
@@ -83,7 +83,7 @@
             transform: translateY(0);
   }
 }
-@keyframes shakrFadeInUp {
+@keyframes tdFadeInUp {
   0% {
     opacity: 0;
     -webkit-transform: translateY(10px);
@@ -97,7 +97,7 @@
             transform: translateY(0);
   }
 }
-@-webkit-keyframes shakrFadeInRight {
+@-webkit-keyframes tdFadeInRight {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-10px);
@@ -111,7 +111,7 @@
             transform: translateX(0);
   }
 }
-@keyframes shakrFadeInRight {
+@keyframes tdFadeInRight {
   0% {
     opacity: 0;
     -webkit-transform: translateX(-10px);
@@ -125,24 +125,24 @@
             transform: translateX(0);
   }
 }
-.shakrFadeInDown {
-  -webkit-animation-name: shakrFadeInDown;
-          animation-name: shakrFadeInDown;
+.tdFadeInDown {
+  -webkit-animation-name: tdFadeInDown;
+          animation-name: tdFadeInDown;
 }
-.shakrFadeInLeft {
-  -webkit-animation-name: shakrFadeInLeft;
-          animation-name: shakrFadeInLeft;
+.tdFadeInLeft {
+  -webkit-animation-name: tdFadeInLeft;
+          animation-name: tdFadeInLeft;
 }
-.shakrFadeInUp {
-  -webkit-animation-name: shakrFadeInUp;
-          animation-name: shakrFadeInUp;
+.tdFadeInUp {
+  -webkit-animation-name: tdFadeInUp;
+          animation-name: tdFadeInUp;
 }
-.shakrFadeInRight {
-  -webkit-animation-name: shakrFadeInRight;
-          animation-name: shakrFadeInRight;
+.tdFadeInRight {
+  -webkit-animation-name: tdFadeInRight;
+          animation-name: tdFadeInRight;
 }
 /* Fading Exits */
-@-webkit-keyframes shakrFadeOutUp {
+@-webkit-keyframes tdFadeOutUp {
   0% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -156,7 +156,7 @@
             transform: translateY(-10px);
   }
 }
-@keyframes shakrFadeOutUp {
+@keyframes tdFadeOutUp {
   0% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -170,7 +170,7 @@
             transform: translateY(-10px);
   }
 }
-@-webkit-keyframes shakrFadeOutRight {
+@-webkit-keyframes tdFadeOutRight {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -184,7 +184,7 @@
             transform: translateX(10px);
   }
 }
-@keyframes shakrFadeOutRight {
+@keyframes tdFadeOutRight {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -198,7 +198,7 @@
             transform: translateX(10px);
   }
 }
-@-webkit-keyframes shakrFadeOutDown {
+@-webkit-keyframes tdFadeOutDown {
   0% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -212,7 +212,7 @@
             transform: translateY(10px);
   }
 }
-@keyframes shakrFadeOutDown {
+@keyframes tdFadeOutDown {
   0% {
     opacity: 1;
     -webkit-transform: translateY(0);
@@ -226,7 +226,7 @@
             transform: translateY(10px);
   }
 }
-@-webkit-keyframes shakrFadeOutLeft {
+@-webkit-keyframes tdFadeOutLeft {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -240,7 +240,7 @@
             transform: translateX(-10px);
   }
 }
-@keyframes shakrFadeOutLeft {
+@keyframes tdFadeOutLeft {
   0% {
     opacity: 1;
     -webkit-transform: translateX(0);
@@ -254,24 +254,24 @@
             transform: translateX(-10px);
   }
 }
-.shakrFadeOutUp {
-  -webkit-animation-name: shakrFadeOutUp;
-          animation-name: shakrFadeOutUp;
+.tdFadeOutUp {
+  -webkit-animation-name: tdFadeOutUp;
+          animation-name: tdFadeOutUp;
 }
-.shakrFadeOutRight {
-  -webkit-animation-name: shakrFadeOutRight;
-          animation-name: shakrFadeOutRight;
+.tdFadeOutRight {
+  -webkit-animation-name: tdFadeOutRight;
+          animation-name: tdFadeOutRight;
 }
-.shakrFadeOutDown {
-  -webkit-animation-name: shakrFadeOutDown;
-          animation-name: shakrFadeOutDown;
+.tdFadeOutDown {
+  -webkit-animation-name: tdFadeOutDown;
+          animation-name: tdFadeOutDown;
 }
-.shakrFadeOutLeft {
-  -webkit-animation-name: shakrFadeOutLeft;
-          animation-name: shakrFadeOutLeft;
+.tdFadeOutLeft {
+  -webkit-animation-name: tdFadeOutLeft;
+          animation-name: tdFadeOutLeft;
 }
 /* Hinge Flip */
-@-webkit-keyframes shakrHingeFlipIn {
+@-webkit-keyframes tdHingeFlipIn {
   0% {
     opacity: 0;
     -webkit-transform: perspective(600px) rotateX(0deg);
@@ -299,7 +299,7 @@
             animation-timing-function: ease-out;
   }
 }
-@keyframes shakrHingeFlipIn {
+@keyframes tdHingeFlipIn {
   0% {
     opacity: 0;
     -webkit-transform: perspective(600px) rotateX(0deg);
@@ -327,11 +327,11 @@
             animation-timing-function: ease-out;
   }
 }
-.shakrHingeFlipIn {
-  -webkit-animation-name: shakrHingeFlipIn;
-          animation-name: shakrHingeFlipIn;
+.tdHingeFlipIn {
+  -webkit-animation-name: tdHingeFlipIn;
+          animation-name: tdHingeFlipIn;
 }
-@-webkit-keyframes shakrHingeFlipOut {
+@-webkit-keyframes tdHingeFlipOut {
   0% {
     opacity: 1;
     -webkit-transform: perspective(600px) rotateX(0deg);
@@ -359,7 +359,7 @@
             animation-timing-function: ease-out;
   }
 }
-@keyframes shakrHingeFlipOut {
+@keyframes tdHingeFlipOut {
   0% {
     opacity: 1;
     -webkit-transform: perspective(600px) rotateX(0deg);
@@ -387,12 +387,12 @@
             animation-timing-function: ease-out;
   }
 }
-.shakrHingeFlipOut {
-  -webkit-animation-name: shakrHingeFlipOut;
-          animation-name: shakrHingeFlipOut;
+.tdHingeFlipOut {
+  -webkit-animation-name: tdHingeFlipOut;
+          animation-name: tdHingeFlipOut;
 }
 /* Drop In */
-@-webkit-keyframes shakrDropInLeft {
+@-webkit-keyframes tdDropInLeft {
   0% {
     opacity: 1;
     -webkit-transform: rotate(2deg) translateY(-15px);
@@ -429,7 +429,7 @@
             animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
   }
 }
-@keyframes shakrDropInLeft {
+@keyframes tdDropInLeft {
   0% {
     opacity: 1;
     -webkit-transform: rotate(2deg) translateY(-15px);
@@ -466,7 +466,7 @@
             animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
   }
 }
-@-webkit-keyframes shakrDropInRight {
+@-webkit-keyframes tdDropInRight {
   0% {
     opacity: 1;
     -webkit-transform: rotate(-2deg) translateY(-15px);
@@ -503,7 +503,7 @@
             animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
   }
 }
-@keyframes shakrDropInRight {
+@keyframes tdDropInRight {
   0% {
     opacity: 1;
     -webkit-transform: rotate(-2deg) translateY(-15px);
@@ -540,11 +540,11 @@
             animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
   }
 }
-.shakrDropInLeft {
-  -webkit-animation-name: shakrDropInLeft;
-          animation-name: shakrDropInLeft;
+.tdDropInLeft {
+  -webkit-animation-name: tdDropInLeft;
+          animation-name: tdDropInLeft;
 }
-.shakrDropInRight {
-  -webkit-animation-name: shakrDropInRight;
-          animation-name: shakrDropInRight;
+.tdDropInRight {
+  -webkit-animation-name: tdDropInRight;
+          animation-name: tdDropInRight;
 }

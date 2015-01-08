@@ -1,7 +1,7 @@
-/* ==================================== */
-/* ==== tuesday.less ================== */
-/* ==== Shakr CSS Animation Library === */
-/* ==================================== */
+/* ======================================== */
+/* ==== tuesday.less ====================== */
+/* ==== A quirky CSS Animation Library ==== */
+/* ======================================== */
 
 @easeOutCirc: cubic-bezier(0, 0.590, 0.375, 1);
 @easeInCirc: cubic-bezier(0.590, 0, 1, 0.375);
@@ -16,7 +16,7 @@
 
 
 /* Fading Entrances */
-@keyframes shakrFadeInDown{
+@keyframes tdFadeInDown{
 	0% { 
 		opacity: 0;
 		transform: translateY(-10px);
@@ -29,7 +29,7 @@
     }
 }
 
-@keyframes shakrFadeInLeft{
+@keyframes tdFadeInLeft{
 	0% { 
 		opacity: 0;
 		transform: translateX(10px);
@@ -42,7 +42,7 @@
     }
 }
 
-@keyframes shakrFadeInUp{
+@keyframes tdFadeInUp{
 	0% { 
 		opacity: 0;
 		transform: translateY(10px);
@@ -55,7 +55,7 @@
     }
 }
 
-@keyframes shakrFadeInRight{
+@keyframes tdFadeInRight{
 	0% { 
 		opacity: 0;
 		transform: translateX(-10px);
@@ -68,22 +68,22 @@
     }
 }
 
-.shakrFadeInDown{
-	animation-name: shakrFadeInDown;
+.tdFadeInDown{
+	animation-name: tdFadeInDown;
 }
-.shakrFadeInLeft{
-	animation-name: shakrFadeInLeft;
+.tdFadeInLeft{
+	animation-name: tdFadeInLeft;
 }
-.shakrFadeInUp{
-	animation-name: shakrFadeInUp;
+.tdFadeInUp{
+	animation-name: tdFadeInUp;
 }
-.shakrFadeInRight{
-	animation-name: shakrFadeInRight;
+.tdFadeInRight{
+	animation-name: tdFadeInRight;
 }
 
 
 /* Fading Exits */
-@keyframes shakrFadeOutUp {
+@keyframes tdFadeOutUp {
 	0% { 
 		opacity: 1;
 		transform: translateY(0);
@@ -96,7 +96,7 @@
     }
 }
 
-@keyframes shakrFadeOutRight {
+@keyframes tdFadeOutRight {
 	0% { 
 		opacity: 1;
 		transform: translateX(0);
@@ -109,7 +109,7 @@
     }
 }
 
-@keyframes shakrFadeOutDown {
+@keyframes tdFadeOutDown {
 	0% { 
 		opacity: 1;
 		transform: translateY(0);
@@ -122,7 +122,7 @@
     }
 }
 
-@keyframes shakrFadeOutLeft {
+@keyframes tdFadeOutLeft {
 	0% { 
 		opacity: 1;
 		transform: translateX(0);
@@ -135,22 +135,22 @@
     }
 }
 
-.shakrFadeOutUp{
-	animation-name: shakrFadeOutUp;
+.tdFadeOutUp{
+	animation-name: tdFadeOutUp;
 }
-.shakrFadeOutRight{
-	animation-name: shakrFadeOutRight;
+.tdFadeOutRight{
+	animation-name: tdFadeOutRight;
 }
-.shakrFadeOutDown{
-	animation-name: shakrFadeOutDown;
+.tdFadeOutDown{
+	animation-name: tdFadeOutDown;
 }
-.shakrFadeOutLeft{
-	animation-name: shakrFadeOutLeft;
+.tdFadeOutLeft{
+	animation-name: tdFadeOutLeft;
 }
 
 
 /* Hinge Flip */
-@keyframes shakrHingeFlipIn {
+@keyframes tdHingeFlipIn {
 	0% { 
 		opacity: 0;
 		transform: perspective(600px) rotateX(0deg);
@@ -172,11 +172,11 @@
     }
 }
 
-.shakrHingeFlipIn {
-	animation-name: shakrHingeFlipIn;
+.tdHingeFlipIn {
+	animation-name: tdHingeFlipIn;
 }
 
-@keyframes shakrHingeFlipOut {
+@keyframes tdHingeFlipOut {
 	0% { 
 		opacity: 1;
 		transform: perspective(600px) rotateX(0deg);
@@ -198,13 +198,13 @@
     }
 }
 
-.shakrHingeFlipOut {
-	animation-name: shakrHingeFlipOut;
+.tdHingeFlipOut {
+	animation-name: tdHingeFlipOut;
 }
 
 
 /* Drop In */
-@keyframes shakrDropInLeft {
+@keyframes tdDropInLeft {
 	0% { 
 		opacity: 1;
 		transform: rotate(2deg) translateY(-15px);
@@ -232,7 +232,7 @@
 	}
 }
 
-@keyframes shakrDropInRight {
+@keyframes tdDropInRight {
 	0% { 
 		opacity: 1;
 		transform: rotate(-2deg) translateY(-15px);
@@ -260,9 +260,9 @@
 	}
 }
 
-.shakrDropInLeft {
-	animation-name: shakrDropInLeft;
+.tdDropInLeft {
+	animation-name: tdDropInLeft;
 }
-.shakrDropInRight {
-	animation-name: shakrDropInRight;
+.tdDropInRight {
+	animation-name: tdDropInRight;
 }
