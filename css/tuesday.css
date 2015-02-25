@@ -394,6 +394,9 @@
 /* Drop In */
 @-webkit-keyframes tdDropInLeft {
   0% {
+    opacity: 0;
+  }
+  1% {
     opacity: 1;
     -webkit-transform: rotate(2deg) translateY(-15px);
             transform: rotate(2deg) translateY(-15px);
@@ -431,6 +434,9 @@
 }
 @keyframes tdDropInLeft {
   0% {
+    opacity: 0;
+  }
+  1% {
     opacity: 1;
     -webkit-transform: rotate(2deg) translateY(-15px);
             transform: rotate(2deg) translateY(-15px);
@@ -468,6 +474,9 @@
 }
 @-webkit-keyframes tdDropInRight {
   0% {
+    opacity: 0;
+  }
+  1% {
     opacity: 1;
     -webkit-transform: rotate(-2deg) translateY(-15px);
             transform: rotate(-2deg) translateY(-15px);
@@ -505,6 +514,9 @@
 }
 @keyframes tdDropInRight {
   0% {
+    opacity: 0;
+  }
+  1% {
     opacity: 1;
     -webkit-transform: rotate(-2deg) translateY(-15px);
             transform: rotate(-2deg) translateY(-15px);
