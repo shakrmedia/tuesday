@@ -12,6 +12,47 @@
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
 }
+/* Basic Fades */
+@-webkit-keyframes tdFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tdFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes tdFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes tdFadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.tdFadeIn {
+  -webkit-animation-name: tdFadeIn;
+          animation-name: tdFadeIn;
+}
+.tdFadeOut {
+  -webkit-animation-name: tdFadeOut;
+          animation-name: tdFadeOut;
+}
 /* Fading Entrances */
 @-webkit-keyframes tdFadeInDown {
   0% {

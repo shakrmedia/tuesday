@@ -28,6 +28,10 @@ All animation names start with `td` prefix. Naming conventions follow that of th
 
 More animations are to be added.
 
+#### Basic Fades
+- tdFadeIn
+- tdFadeOut
+
 #### DropIn
 - tdFadeInDown
 - tdFadeInLeft

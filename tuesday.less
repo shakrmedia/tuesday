@@ -14,9 +14,37 @@
 	animation-iteration-count: infinite;
 }
 
+/* Basic Fades */
+@keyframes tdFadeIn {
+	0% { 
+		opacity: 0;
+    }
+
+	100% { 
+		opacity: 1;
+    }
+}
+
+@keyframes tdFadeOut {
+	0% { 
+		opacity: 1;
+    }
+
+	100% { 
+		opacity: 0;
+    }
+}
+
+.tdFadeIn {
+	animation-name: tdFadeIn;
+}
+.tdFadeOut {
+	animation-name: tdFadeOut;
+}
+
 
 /* Fading Entrances */
-@keyframes tdFadeInDown{
+@keyframes tdFadeInDown {
 	0% { 
 		opacity: 0;
 		transform: translateY(-10px);
@@ -29,7 +57,7 @@
     }
 }
 
-@keyframes tdFadeInLeft{
+@keyframes tdFadeInLeft {
 	0% { 
 		opacity: 0;
 		transform: translateX(10px);
@@ -42,7 +70,7 @@
     }
 }
 
-@keyframes tdFadeInUp{
+@keyframes tdFadeInUp {
 	0% { 
 		opacity: 0;
 		transform: translateY(10px);
@@ -55,7 +83,7 @@
     }
 }
 
-@keyframes tdFadeInRight{
+@keyframes tdFadeInRight {
 	0% { 
 		opacity: 0;
 		transform: translateX(-10px);
@@ -68,16 +96,16 @@
     }
 }
 
-.tdFadeInDown{
+.tdFadeInDown {
 	animation-name: tdFadeInDown;
 }
-.tdFadeInLeft{
+.tdFadeInLeft {
 	animation-name: tdFadeInLeft;
 }
-.tdFadeInUp{
+.tdFadeInUp {
 	animation-name: tdFadeInUp;
 }
-.tdFadeInRight{
+.tdFadeInRight {
 	animation-name: tdFadeInRight;
 }
 
@@ -135,16 +163,16 @@
     }
 }
 
-.tdFadeOutUp{
+.tdFadeOutUp {
 	animation-name: tdFadeOutUp;
 }
-.tdFadeOutRight{
+.tdFadeOutRight {
 	animation-name: tdFadeOutRight;
 }
-.tdFadeOutDown{
+.tdFadeOutDown {
 	animation-name: tdFadeOutDown;
 }
-.tdFadeOutLeft{
+.tdFadeOutLeft {
 	animation-name: tdFadeOutLeft;
 }
 
