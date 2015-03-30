@@ -19,17 +19,9 @@ module.exports = function(grunt) {
     less: {
       main: {
         expand: true,
-        cwd: "less",
-        src: ["petal.less"],
+        src: ["tuesday.less", "style.less"],
         ext: ".css",
         dest: "build"
-      },
-      docs: {
-        expand: true,
-        cwd: "docs/less",
-        src: ["*.less"],
-        ext: ".css",
-        dest: "docs"
       }
     },
 
@@ -41,7 +33,7 @@ module.exports = function(grunt) {
       build: {
         expand: true,
         cwd: "build",
-        src: ["petal.css"],
+        src: ["tuesday.css"],
         dest: "build"
       }
     },
@@ -49,8 +41,8 @@ module.exports = function(grunt) {
     // css minify
     cssmin: {
       minify: {
-        src: "build/petal.css",
-        dest: "build/petal.min.css"
+        src: "build/tuesday.css",
+        dest: "build/tuesday.min.css"
       }
     },
 
@@ -58,7 +50,7 @@ module.exports = function(grunt) {
     // watch
     watch: {
       less: {
-        files: ['less/**/*', 'docs/contents/**/*', 'docs/less/*'],
+        files: ['tuesday.less','style.less'],
         tasks: ['default']
       }
     }
