@@ -20,34 +20,35 @@ Tuesday is an stand-alone library you can use without any dependencies, but you 
 1. Download the release ZIP file or clone the repository.
 
 2. Include the compiled CSS file in the `<head>` of your HTML file.
-```html
-<head>
-  <link rel="stylesheet" type="text/css" href="css/tuesday.min.css" />
-</head>
-```
+    ```html
+    <head>
+      <link rel="stylesheet" type="text/css" href="css/tuesday.min.css" />
+    </head>
+    ```
 
 3. Add the class `.animated` and the class name of the animation to the element you want to animate.
-```html
-<h1 id="header-text" class="animated tdDropInLeft">It's Tuesday.</h1>
-```
+    ```html
+    <h1 id="header-text" class="animated tdDropInLeft">It's Tuesday.</h1>
+    ```
 
 4. Your element will now animate!
+
 
 #### The Advanced Way (Using LESS source file)
 1. Download the release ZIP file or clone the repository.
 
 2. Import the source `tuesday.less` file to your site LESS stylesheet.
-```less
-@import 'tuesday.less';
-```
+    ```less
+    @import 'tuesday.less';
+    ```
 
 3. Apply the animation classes as mixins on the element rule.
-```less
-h1#header-text {
-    .animated;
-    .tdDropInLeft;
-}
-```
+    ```less
+    h1#header-text {
+        .animated;
+        .tdDropInLeft;
+    }
+    ```
 
 4. Your element will now animate!
 
