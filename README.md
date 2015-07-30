@@ -7,11 +7,10 @@ It's a quirky CSS Animation Library developed at Shakr.
 #### Why 'Tuesday'?
 Because at Shakr, Tuesdays are like Mondays.
 
-
-#### How is this different from other CSS animation libraries?
+#### Why did you make Tuesday?
 There are many other CSS animation libraries out there, but many of them have motion paths that are too big that stand out too much when used inside certain environments. Also a problem is that some of the effects designed are just a bit too long in duration for UI element transitions. (0.2s and 0.3s is a big difference, if you know what I mean.)
 
-Tuesday aims to fill out the gap inbetween, providing a more subtle set of effects that can seamlessly integrate into a wider variety of websites or web-app UI designs.
+So while we were working on our project, we decided to make our own animation library that fits our needs. Tuesday aims to fill out the gap inbetween, providing a more subtle set of effects that can seamlessly integrate into a wider variety of websites or web-app UI designs.
 
 Tuesday is an stand-alone library you can use without any dependencies, but you can use Tuesday alongside other animation libraries as well. All Tuesday animation names start with `td` prefix so there is a low chance two libraries will collide unless there is another one that uses the same prefix and animation name. 
 
@@ -65,6 +64,9 @@ Similarly if you need to adjust the duration of the animation, add `animation-du
 Tuesday uses [Grunt](http://gruntjs.com/) to automate the building process. In case you want to custom-build the CSS file, you can do so by setting up Grunt, heading to the cloned repository path and running `grunt`.
 
 The default grunt task includes [autoprefixer](https://github.com/postcss/autoprefixer) that automatically includes vendor-prefixes for CSS3 draft properties.
+
+In case you want to remove any specific group of animations from the output file to reduce file size, just comment out lines in the main `tuesday.less` before running Grunt, and the compiler will skip through the excluded ones.
+
 
 ## Animation List
 
