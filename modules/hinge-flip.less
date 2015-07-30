@@ -1,0 +1,52 @@
+/* Hinge Flip */
+@keyframes tdHingeFlipIn {
+    0% { 
+        opacity: 0;
+        transform: perspective(600px) rotateX(0deg);
+        transform-origin: center top;
+        animation-timing-function: @easeOutCirc;
+    }
+    
+    50% {
+        transform: perspective(600px) rotateX(-10deg);
+        transform-origin: center top;
+        animation-timing-function: ease-in;
+    }
+
+    100% { 
+        opacity: 1;
+        transform: perspective(600px) rotateX(0deg);
+        transform-origin: center top;
+        animation-timing-function: ease-out;
+    }
+}
+
+.tdHingeFlipIn {
+    animation-name: tdHingeFlipIn;
+}
+
+@keyframes tdHingeFlipOut {
+    0% { 
+        opacity: 1;
+        transform: perspective(600px) rotateX(0deg);
+        transform-origin: center top;
+        animation-timing-function: @easeOutCirc;
+    }
+    
+    50% {
+        transform: perspective(600px) rotateX(-10deg);
+        transform-origin: center top;
+        animation-timing-function: ease-in;
+    }
+
+    100% { 
+        opacity: 0;
+        transform: perspective(600px) rotateX(0deg);
+        transform-origin: center top;
+        animation-timing-function: ease-out;
+    }
+}
+
+.tdHingeFlipOut {
+    animation-name: tdHingeFlipOut;
+}

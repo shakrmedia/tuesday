@@ -1,0 +1,44 @@
+/* Swing */
+@keyframes tdSwingIn {
+    0% { 
+        opacity: 0;
+        transform: rotate(-10deg) scale(0.85);
+        animation-timing-function: @easeOutCirc;
+    }
+    
+    70% {
+        opacity: 1;
+        transform: rotate(1deg);
+        animation-timing-function: ease;
+    }
+    100% { 
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+        animation-timing-function: ease;
+    }
+}
+
+@keyframes tdSwingOut {
+    0% { 
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+        animation-timing-function: @easeOutCirc;
+    }
+    30% {
+        opacity: 1;
+        transform: rotate(-1deg);
+        animation-timing-function: ease;
+    }
+    100% { 
+        opacity: 0;
+        transform: rotate(10deg) scale(0.85);
+        animation-timing-function: ease;
+    }
+}
+
+.tdSwingIn {
+    animation-name: tdSwingIn;
+}
+.tdSwingOut {
+    animation-name: tdSwingOut;
+}

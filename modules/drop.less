@@ -1,0 +1,69 @@
+/* Drop In */
+@keyframes tdDropInLeft {
+    0% {
+        opacity: 0;
+    }
+    1% { 
+        opacity: 1;
+        transform: rotate(2deg) translateY(-15px);
+        transform-origin: right bottom;
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(0) translateY(0px);
+        transform-origin: right bottom;
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        transform: rotate(-0.5deg) translateY(0px);
+        transform-origin: left bottom;
+        animation-timing-function: @easeInCirc;
+    }
+    100% { 
+        opacity: 1;
+        transform: rotate(0) translateY(0px);
+        transform-origin: center bottom;
+        animation-timing-function: @easeOutCirc;
+    }
+}
+
+@keyframes tdDropInRight {
+    0% {
+        opacity: 0;
+    }
+    1% { 
+        opacity: 1;
+        transform: rotate(-2deg) translateY(-15px);
+        transform-origin: left bottom;
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        opacity: 1;
+        transform: rotate(0) translateY(0px);
+        transform-origin: left bottom;
+        animation-timing-function: ease-out;
+    }
+
+    75% {
+        transform: rotate(0.5deg) translateY(0px);
+        transform-origin: right bottom;
+        animation-timing-function: @easeInCirc;
+    }
+    100% { 
+        opacity: 1;
+        transform: rotate(0) translateY(0px);
+        transform-origin: center bottom;
+        animation-timing-function: @easeOutCirc;
+    }
+}
+
+.tdDropInLeft {
+    animation-name: tdDropInLeft;
+}
+.tdDropInRight {
+    animation-name: tdDropInRight;
+}
