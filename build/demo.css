@@ -89,7 +89,9 @@ select.animationlist {
   height: 40px;
   padding: 10px 15px;
   margin: 0 5px 0 0;
-  background: url('../images/arrow-down.svg') no-repeat right center;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20width%3D'30'%20height%3D'24'%3E%3Cpath%20fill%3D'%23aaa'%20d%3D'M8%2011l4%204%204-4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right center;
   border: none;
   box-shadow: 0 0 0 1px #aaa inset;
   line-height: 22px;

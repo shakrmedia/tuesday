@@ -111,7 +111,12 @@ select.animationlist {
 	height: 40px;
 	padding: 10px 15px;
 	margin: 0 5px 0 0;
-	background: url('../images/arrow-down.svg') no-repeat right center;
+	
+	@caret-svg-data: escape("<svg xmlns='http://www.w3.org/2000/svg' width='30' height='24'><path fill='#aaa' d='M8 11l4 4 4-4z'/></svg>");
+	background-image: url("data:image/svg+xml,@{caret-svg-data}");
+	background-repeat: no-repeat;
+	background-position: right center;
+
 	border: none;
 	box-shadow: 0 0 0 1px #aaa inset;
 	line-height: 22px;
