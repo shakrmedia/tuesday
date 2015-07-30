@@ -118,6 +118,12 @@ select.animationlist {
 	vertical-align: top;
 	font-size: 1rem;
 	border-radius: 0;
+	cursor: pointer;
+	outline: none; 
+
+	&:hover {
+		box-shadow: 0 0 0 1px #999 inset;
+	}
 
 	&:focus {
 		box-shadow: 0 0 0 2px @green inset;
@@ -148,34 +154,38 @@ button {
 	height: 40px;
 	padding: 6px 15px;
 	margin: 0 5px 10px 0;
-	border: none;
-	background: @green-d1;
+	border: 2px solid transparent;
+	background: @green;
 	font-size: 1rem;
 	font-weight: bold;
 	line-height: 22px;
 	text-align: center;
 	color: #fff;
-	text-decoration: none;
+	text-decoration: none !important;
 	cursor: pointer;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	box-shadow: 0 0 0 2px rgba(255,255,255,0) inset;
 	border-radius: 0;
-	transition: 0.2s background, 0.2s box-shadow;
+	transition-property: background, border-color, color, box-shadow, opacity;
+	transition-duration: .15s;
 	white-space: pre;
 
 	&:hover {
 		text-decoration: none;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.5) inset;
-		background-color: @green;
+		box-shadow: 0 2px 4px -2px rgba(0,0,0,.2);
 		color: #fff;
+		background-color: @green-l1;
+		border-color: @green-d1;
 	}
 
 	&:active {
 		text-decoration: none;
-		background-color: @green-d3;
+		box-shadow: 0 0px 1px rgba(0,0,0,.2);
+		background-color: @green-d1;
+		border-color: @green-d2;
 		color: #fff;
-		box-shadow: 0 0 0 2px rgba(255,255,255,0.3) inset;
+		transition-duration: 0s;
 	}
 
 	&:focus {
@@ -232,8 +242,11 @@ button {
 		width: 48px;
 		height: 48px;
 		margin: 0 auto;
-		background: url('../images/shakr-feathers.svg') no-repeat center center;
-		background-size: 48px 48px;
+		
+		svg {
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 }
