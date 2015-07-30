@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     less: {
       main: {
         expand: true,
-        src: ["tuesday.less", "style.less"],
+        src: ["tuesday.less", "demo.less"],
         ext: ".css",
         dest: "build"
       }
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     // watch
     watch: {
       less: {
-        files: ['tuesday.less','style.less'],
+        files: ['tuesday.less','demo.less'],
         tasks: ['default']
       }
     }
