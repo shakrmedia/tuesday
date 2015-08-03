@@ -108,3 +108,13 @@ More animations are to be added. Check out the [demo page](http://shakrmedia.git
 #### HingeFlip
 - tdHingeFlipIn
 - tdHingeFlipOut
+
+
+## Author
+- **Hansol Kim** (zvuc) : https://github.com/zvuc/
+- with help from the Shakr Dev team
+
+
+## License 
+Released under the MIT License.
+See [LICENSE](https://github.com/ShakrMedia/tuesday/blob/master/LICENSE) for details.
