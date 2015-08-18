@@ -14,6 +14,8 @@ So while we were working on our project, we decided to make our own animation li
 
 Tuesday is an stand-alone library you can use without any dependencies, but you can use Tuesday alongside other animation libraries as well. All Tuesday animation names start with `td` prefix so there is a low chance two libraries will collide unless there is another one that uses the same prefix and animation name. 
 
+If you're interested, check out the ["Making of" article](http://making.shakr.com/making-tuesday/) in our Making Shakr blog for a more thorough introduction and explanation on how this project came to life.
+
 
 ## How to use
 #### The Basic Way
@@ -118,3 +120,4 @@ More animations are to be added. Check out the [demo page](http://shakrmedia.git
 ## License 
 Released under the MIT License.
 See [LICENSE](https://github.com/ShakrMedia/tuesday/blob/master/LICENSE) for details.
+
