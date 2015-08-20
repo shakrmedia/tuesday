@@ -112,6 +112,9 @@ More animations are to be added. Check out the [demo page](http://shakrmedia.git
 - tdHingeFlipOut
 
 
+## Browser Compatibility
+Tuesday animations are implemented entirely using CSS animations. To see which specific browser versions support CSS animations, please refer to the [Can I Use page](http://caniuse.com/#feat=css-animation).
+
 ## Author
 - **Hansol Kim** (zvuc) : https://github.com/zvuc/
 - with help from the Shakr Dev team
