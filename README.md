@@ -12,7 +12,7 @@ There are many other CSS animation libraries out there, but many of them have mo
 
 So while we were working on our project, we decided to make our own animation library that fits our needs. Tuesday aims to fill out the gap inbetween, providing a more subtle set of effects that can seamlessly integrate into a wider variety of websites or web-app UI designs.
 
-Tuesday is an stand-alone library you can use without any dependencies, but you can use Tuesday alongside other animation libraries as well. All Tuesday animation names start with `td` prefix so there is a low chance two libraries will collide unless there is another one that uses the same prefix and animation name. 
+Tuesday is a stand-alone library you can use without any dependencies, but you can use Tuesday alongside other animation libraries as well. All Tuesday animation names start with `td` prefix so there is a low chance two libraries will collide unless there is another one that uses the same prefix and animation name. 
 
 If you're interested, check out the ["Making of" article](http://making.shakr.com/making-tuesday/) in our Making Shakr blog for a more thorough introduction and explanation on how this project came to life.
 
