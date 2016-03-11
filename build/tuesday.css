@@ -311,8 +311,8 @@
   -webkit-animation-name: tdFadeOutLeft;
           animation-name: tdFadeOutLeft;
 }
-/* Zoom In */
-@-webkit-keyframes tdZoomIn {
+/* Expand Entrances */
+@-webkit-keyframes tdExpandIn {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.85);
@@ -326,7 +326,7 @@
             transform: scale(1);
   }
 }
-@keyframes tdZoomIn {
+@keyframes tdExpandIn {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.85);
@@ -340,29 +340,7 @@
             transform: scale(1);
   }
 }
-@-webkit-keyframes tdZoomInBounce {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85);
-    -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
-            animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
-  }
-  70% {
-    -webkit-transform: scale(1.03);
-            transform: scale(1.03);
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    -webkit-animation-timing-function: ease;
-            animation-timing-function: ease;
-  }
-}
-@keyframes tdZoomInBounce {
+@-webkit-keyframes tdExpandInBounce {
   0% {
     opacity: 0;
     -webkit-transform: scale(0.85);
@@ -384,16 +362,194 @@
             animation-timing-function: ease;
   }
 }
-.tdZoomIn {
-  -webkit-animation-name: tdZoomIn;
-          animation-name: tdZoomIn;
+@keyframes tdExpandInBounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+            animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+  }
+  70% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
 }
-.tdZoomInBounce {
-  -webkit-animation-name: tdZoomInBounce;
-          animation-name: tdZoomInBounce;
+.tdExpandIn {
+  -webkit-animation-name: tdExpandIn;
+          animation-name: tdExpandIn;
 }
-/* Zoom Out */
-@-webkit-keyframes tdZoomOut {
+.tdExpandInBounce {
+  -webkit-animation-name: tdExpandInBounce;
+          animation-name: tdExpandInBounce;
+}
+/* Expand Exits */
+@-webkit-keyframes tdExpandOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+            animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes tdExpandOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+            animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@-webkit-keyframes tdExpandOutBounce {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+            animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+@keyframes tdExpandOutBounce {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+            animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+  }
+  30% {
+    opacity: 1;
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+.tdExpandOut {
+  -webkit-animation-name: tdExpandOut;
+          animation-name: tdExpandOut;
+}
+.tdExpandOutBounce {
+  -webkit-animation-name: tdExpandOutBounce;
+          animation-name: tdExpandOutBounce;
+}
+/* Shrink Entrances */
+@-webkit-keyframes tdShrinkIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+            animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes tdShrinkIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+            animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes tdShrinkInBounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+            animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+  }
+  70% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes tdShrinkInBounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+            animation-timing-function: cubic-bezier(0, 0.59, 0.375, 1);
+  }
+  70% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.tdShrinkIn {
+  -webkit-animation-name: tdShrinkIn;
+          animation-name: tdShrinkIn;
+}
+.tdShrinkInBounce {
+  -webkit-animation-name: tdShrinkInBounce;
+          animation-name: tdShrinkInBounce;
+}
+/* Shrink Exits */
+@-webkit-keyframes tdShrinkOut {
   0% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -409,7 +565,7 @@
             animation-timing-function: ease;
   }
 }
-@keyframes tdZoomOut {
+@keyframes tdShrinkOut {
   0% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -425,7 +581,7 @@
             animation-timing-function: ease;
   }
 }
-@-webkit-keyframes tdZoomOutBounce {
+@-webkit-keyframes tdShrinkOutBounce {
   0% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -448,7 +604,7 @@
             animation-timing-function: ease;
   }
 }
-@keyframes tdZoomOutBounce {
+@keyframes tdShrinkOutBounce {
   0% {
     opacity: 1;
     -webkit-transform: scale(1);
@@ -471,13 +627,13 @@
             animation-timing-function: ease;
   }
 }
-.tdZoomOut {
-  -webkit-animation-name: tdZoomOut;
-          animation-name: tdZoomOut;
+.tdShrinkOut {
+  -webkit-animation-name: tdShrinkOut;
+          animation-name: tdShrinkOut;
 }
-.tdZoomOutBounce {
-  -webkit-animation-name: tdZoomOutBounce;
-          animation-name: tdZoomOutBounce;
+.tdShrinkOutBounce {
+  -webkit-animation-name: tdShrinkOutBounce;
+          animation-name: tdShrinkOutBounce;
 }
 /* Swing */
 @-webkit-keyframes tdSwingIn {
