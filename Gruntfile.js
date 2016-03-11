@@ -50,7 +50,7 @@ module.exports = function(grunt) {
     // watch
     watch: {
       less: {
-        files: ['tuesday.less','demo.less'],
+        files: ['**/*.less'],
         tasks: ['default']
       }
     }
