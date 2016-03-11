@@ -97,21 +97,34 @@ More animations are to be added. Check out the [demo page](http://shakrmedia.git
 - tdFadeOutUp
 - tdFadeOutRight
 
-#### Zoom
-- tdZoomIn
-- tdZoomInBounce
-- tdZoomOut
-- tdZoomOutBounce
+#### Expand
+- tdExpandIn
+- tdExpandInBounce
+- tdExpandOut
+- tdExpandOutBounce
+
+#### Stamp
+- tdStampIn
+- tdStampInSwing
+
+#### Shrink
+- tdShrinkIn
+- tdShrinkInBounce
+- tdShrinkOut
+- tdShrinkOutBounce
 
 #### Swing
 - tdSwingIn
 - tdSwingOut
 
 #### DropIn
-- tdFadeInDown
-- tdFadeInLeft
+- tdDropInLeft
+- tdDropInRight
+
+#### Plop
+- tdPlopIn
+- tdPlopInDown
 - tdFadeInUp
-- tdFadeInRight
 
 #### HingeFlip
 - tdHingeFlipIn
