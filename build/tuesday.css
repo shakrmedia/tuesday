@@ -635,6 +635,123 @@
   -webkit-animation-name: tdShrinkOutBounce;
           animation-name: tdShrinkOutBounce;
 }
+/* Stamp Entrances */
+@-webkit-keyframes tdStampIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-animation-timing-function: cubic-bezier(0.59, 0, 1, 0.375);
+            animation-timing-function: cubic-bezier(0.59, 0, 1, 0.375);
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes tdStampIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
+    -webkit-animation-timing-function: cubic-bezier(0.59, 0, 1, 0.375);
+            animation-timing-function: cubic-bezier(0.59, 0, 1, 0.375);
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes tdStampInSwing {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.3) rotate(-10deg);
+            transform: scale(1.3) rotate(-10deg);
+    -webkit-animation-timing-function: cubic-bezier(0.59, 0, 1, 0.375);
+            animation-timing-function: cubic-bezier(0.59, 0, 1, 0.375);
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0);
+            transform: scale(1) rotate(0);
+  }
+}
+@keyframes tdStampInSwing {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.3) rotate(-10deg);
+            transform: scale(1.3) rotate(-10deg);
+    -webkit-animation-timing-function: cubic-bezier(0.59, 0, 1, 0.375);
+            animation-timing-function: cubic-bezier(0.59, 0, 1, 0.375);
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  90% {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0);
+            transform: scale(1) rotate(0);
+  }
+}
+.tdStampIn {
+  -webkit-animation-name: tdStampIn;
+          animation-name: tdStampIn;
+}
+.tdStampInSwing {
+  -webkit-animation-name: tdStampInSwing;
+          animation-name: tdStampInSwing;
+}
 /* Swing */
 @-webkit-keyframes tdSwingIn {
   0% {

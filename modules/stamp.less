@@ -1,0 +1,54 @@
+/* Stamp Entrances */
+@keyframes tdStampIn {
+    0% { 
+        opacity: 0;
+        transform: scale(1.3);
+        animation-timing-function: @easeInCirc;
+    }
+    50% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    100% { 
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes tdStampInSwing {
+    0% { 
+        opacity: 0;
+        transform: scale(1.3) rotate(-10deg);
+        animation-timing-function: @easeInCirc;
+    }
+    50% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    100% { 
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+.tdStampIn {
+    animation-name: tdStampIn;
+}
+.tdStampInSwing {
+    animation-name: tdStampInSwing;
+}
+
