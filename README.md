@@ -1,7 +1,7 @@
 Tuesday
 =======
 
-#### What is it? 
+#### What is it?
 It's a quirky CSS Animation Library developed at Shakr.
 
 #### Why 'Tuesday'?
@@ -12,7 +12,7 @@ There are many other CSS animation libraries out there, but many of them have mo
 
 So while we were working on our project, we decided to make our own animation library that fits our needs. Tuesday aims to fill out the gap inbetween, providing a more subtle set of effects that can seamlessly integrate into a wider variety of websites or web-app UI designs.
 
-Tuesday is a stand-alone library you can use without any dependencies, but you can use Tuesday alongside other animation libraries as well. All Tuesday animation names start with `td` prefix so there is a low chance two libraries will collide unless there is another one that uses the same prefix and animation name. 
+Tuesday is a stand-alone library you can use without any dependencies, but you can use Tuesday alongside other animation libraries as well. All Tuesday animation names start with `td` prefix so there is a low chance two libraries will collide unless there is another one that uses the same prefix and animation name.
 
 If you're interested, check out the ["Making of" article](http://making.shakr.com/making-tuesday/) in our Making Shakr blog for a more thorough introduction and explanation on how this project came to life.
 
@@ -28,9 +28,9 @@ If you're interested, check out the ["Making of" article](http://making.shakr.co
     </head>
     ```
 
-    Or alternatively, use a CDN link instead if you don't want to host the file. 
+    Or alternatively, use a CDN link instead if you don't want to host the file.
     ```html
-    <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/ShakrMedia/tuesday/master/build/tuesday.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/shakrmedia/tuesday@v1.1.0/build/tuesday.min.css" />
     ```
 
 
@@ -139,7 +139,7 @@ Tuesday animations are implemented entirely using CSS animations. To see which s
 - with help from the Shakr Dev team
 
 
-## License 
+## License
 Released under the MIT License.
 See [LICENSE](https://github.com/ShakrMedia/tuesday/blob/master/LICENSE) for details.
 
