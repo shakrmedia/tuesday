@@ -22,11 +22,11 @@
     "url": "http://www.shakr.com"
   },
   "devDependencies": {
-    "grunt": "~0.4.5",
+    "grunt": "^1.0.4",
     "grunt-autoprefixer": "~2.2.0",
-    "grunt-contrib-cssmin": "~0.11.0",
-    "grunt-contrib-less": "~1.0.0",
-    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
     "load-grunt-tasks": "^3.1.0"
   }
 }
