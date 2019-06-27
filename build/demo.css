@@ -1,5 +1,25 @@
-@import url('//fonts.googleapis.com/css?family=Lato:400,900italic,700');
 /* stylesheet for tuesday demo page */
+@font-face {
+  font-family: 'Lato';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Lato Black Italic'), local('Lato-BlackItalic'), url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI3wi_Gwfo.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v15/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v15/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
+}
 .font-default {
   font-family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
 }
@@ -90,7 +110,7 @@ select.animationlist {
   height: 40px;
   padding: 10px 15px;
   margin: 0 5px 0 0;
-  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20width%3D'30'%20height%3D'24'%3E%3Cpath%20fill%3D'%23aaa'%20d%3D'M8%2011l4%204%204-4z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='24'><path fill='%23aaa' d='M8 11l4 4 4-4z'/></svg>");
   background-repeat: no-repeat;
   background-position: right center;
   border: none;
@@ -145,7 +165,7 @@ button {
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0) inset;
   border-radius: 0;
   transition-property: background, border-color, color, box-shadow, opacity;
-  transition-duration: .15s;
+  transition-duration: 0.15s;
   white-space: pre;
 }
 button:hover {
