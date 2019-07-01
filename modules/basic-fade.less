@@ -1,27 +1,8 @@
-/* Basic Fades */
-@keyframes tdFadeIn {
-    0% { 
-        opacity: 0;
-    }
-
-    100% { 
-        opacity: 1;
-    }
-}
-
-@keyframes tdFadeOut {
-    0% { 
-        opacity: 1;
-    }
-
-    100% { 
-        opacity: 0;
-    }
-}
+@import './keyframes/basic-fade.keyframes.less';
 
 .tdFadeIn {
-    animation-name: tdFadeIn;
+    .tdFadeIn();
 }
 .tdFadeOut {
-    animation-name: tdFadeOut;
+    .tdFadeOut();
 }

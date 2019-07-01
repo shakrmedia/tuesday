@@ -1,131 +1,27 @@
-/* Fading Entrances */
-@keyframes tdFadeInDown {
-    0% { 
-        opacity: 0;
-        transform: translateY(-10px);
-        animation-timing-function: @easeOutCirc;
-    }
-
-    100% { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes tdFadeInLeft {
-    0% { 
-        opacity: 0;
-        transform: translateX(10px);
-        animation-timing-function: @easeOutCirc;
-    }
-
-    100% { 
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes tdFadeInUp {
-    0% { 
-        opacity: 0;
-        transform: translateY(10px);
-        animation-timing-function: @easeOutCirc;
-    }
-
-    100% { 
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes tdFadeInRight {
-    0% { 
-        opacity: 0;
-        transform: translateX(-10px);
-        animation-timing-function: @easeOutCirc;
-    }
-
-    100% { 
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
+@import './keyframes/fade.keyframes.less';
 
 .tdFadeInDown {
-    animation-name: tdFadeInDown;
+    .tdFadeInDown();
 }
 .tdFadeInLeft {
-    animation-name: tdFadeInLeft;
+    .tdFadeInLeft();
 }
 .tdFadeInUp {
-    animation-name: tdFadeInUp;
+    .tdFadeInUp();
 }
 .tdFadeInRight {
-    animation-name: tdFadeInRight;
-}
-
-/* Fading Exits */
-@keyframes tdFadeOutUp {
-    0% { 
-        opacity: 1;
-        transform: translateY(0);
-        animation-timing-function: @easeOutCirc;
-    }
-
-    100% { 
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-}
-
-@keyframes tdFadeOutRight {
-    0% { 
-        opacity: 1;
-        transform: translateX(0);
-        animation-timing-function: @easeOutCirc;
-    }
-
-    100% { 
-        opacity: 0;
-        transform: translateX(10px);
-    }
-}
-
-@keyframes tdFadeOutDown {
-    0% { 
-        opacity: 1;
-        transform: translateY(0);
-        animation-timing-function: @easeOutCirc;
-    }
-
-    100% { 
-        opacity: 0;
-        transform: translateY(10px);
-    }
-}
-
-@keyframes tdFadeOutLeft {
-    0% { 
-        opacity: 1;
-        transform: translateX(0);
-        animation-timing-function: @easeOutCirc;
-    }
-
-    100% { 
-        opacity: 0;
-        transform: translateX(-10px);
-    }
+    .tdFadeInRight();
 }
 
 .tdFadeOutUp {
-    animation-name: tdFadeOutUp;
+    .tdFadeOutUp();
 }
 .tdFadeOutRight {
-    animation-name: tdFadeOutRight;
+    .tdFadeOutRight();
 }
 .tdFadeOutDown {
-    animation-name: tdFadeOutDown;
+    .tdFadeOutDown();
 }
 .tdFadeOutLeft {
-    animation-name: tdFadeOutLeft;
+    .tdFadeOutLeft();
 }
