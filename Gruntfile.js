@@ -1,7 +1,7 @@
 /*!
  * Tuesday - Gruntfile
  * http://shakrmedia.github.io/tuesday
- * Copyright 2015 Shakr Media Co., Ltd.
+ * Copyright 2015-2020 Shakr Media Co., Ltd.
  */
 
 module.exports = function(grunt) {
@@ -14,38 +14,125 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    meta: {
+      banner: ['/* ',
+              ' * <%= pkg.name %> v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> ',
+              ' * <%= pkg.description %> ',
+              ' * <%= pkg.homepage %> ',
+              ' * ',
+              ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>; <%= pkg.license %> License ',
+              ' */'].join('\n'),
+      banner_compact: '/* <%= pkg.name %> v<%= pkg.version %> - (C)<%= grunt.template.today("yyyy") %> Shakr; <%= pkg.license %> License */',
+      banner_legacy: ['/* ',
+              ' * <%= pkg.name %> v<%= pkg.version %> - <%= grunt.template.today("yyyy-mm-dd") %> ',
+              ' * (Legacy Compatible) ',
+              ' * <%= pkg.description %> ',
+              ' * <%= pkg.homepage %> ',
+              ' * ',
+              ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>; <%= pkg.license %> License ',
+              ' */'].join('\n'),
+      banner_legacy_compact: '/* <%= pkg.name %> v<%= pkg.version %> (Legacy Compat) - (C)<%= grunt.template.today("yyyy") %> Shakr; <%= pkg.license %> License */',    
+    },
 
     // LESS
     less: {
       main: {
         expand: true,
-        src: ["tuesday.less", "demo.less"],
-        ext: ".css",
-        dest: "build"
+        flatten: true,
+        files: [
+          { src: ["less/tuesday.less"], dest: "build/tuesday.css" },
+          { src: ["less/demo.less"], dest: "build/demo.css" }
+        ]
       }
     },
 
-    // Autoprefixer
-    autoprefixer: {
-      options: {
-        browser: ["last 3 versions", "ie 10"]
+    // postcss
+    postcss: {
+      // autoprefixer
+      autoprefixer: {
+        options: {
+          processors: [
+            require('autoprefixer')()
+          ]
+        },
+        files: [
+          { src: 'build/tuesday.css', dest: 'build/tuesday.css' }
+        ]
       },
-      build: {
-        expand: true,
-        cwd: "build",
-        src: ["tuesday.css"],
-        dest: "build"
+      // autoprefixer with legacy browser support
+      'autoprefixer-legacy': {
+        options: {
+          processors: [
+            require('autoprefixer')({
+              overrideBrowserslist: ["last 3 versions", "not dead", "IE 10"]
+            })
+          ]
+        },
+        files: [
+          { src: 'build/tuesday.css', dest: 'build/tuesday.legacy.css' }
+        ]
+      },
+      // cssnano
+      nano: {
+        options: {
+          processors: [
+            require('cssnano')({
+              autoprefixer: false
+            })
+          ]
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'build/',
+            src: ['tuesday.css','tuesday.legacy.css'],
+            dest: 'build/',
+            ext: '.min.css',
+            extDot: 'last'
+          }
+        ]
       }
     },
 
-    // css minify
-    cssmin: {
-      minify: {
-        src: "build/tuesday.css",
-        dest: "build/tuesday.min.css"
-      }
+    // Banner
+    usebanner: {
+      options: {
+        position: 'top',
+        banner: '<%= meta.banner %>'
+      },
+      full: {
+        options: {
+          banner: '<%= meta.banner %>'
+        },
+        src: [
+          "build/<%= pkg.codename %>.css"
+        ]
+      },
+      compact: {
+        options: {
+          banner: '<%= meta.banner_compact %>'
+        },
+        src: [
+          "build/<%= pkg.codename %>.min.css",
+        ]
+      },
+      legacyfull: {
+        options: {
+          banner: '<%= meta.banner_legacy %>'
+        },
+        src: [
+          "build/<%= pkg.codename %>.legacy.css"
+        ]
+      },
+      legacycompact: {
+        options: {
+          banner: '<%= meta.banner_legacy_compact %>'
+        },
+        src: [
+          "build/<%= pkg.codename %>.legacy.min.css",
+        ]
+      },
     },
-
 
     // watch
     watch: {
@@ -56,7 +143,20 @@ module.exports = function(grunt) {
     }
   });
   
-  grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin']);
-  grunt.registerTask('dev', ['watch']);
+  grunt.registerTask('default', [
+    'build', 'build-legacy'
+  ]);
+
+  grunt.registerTask('build', [
+    'less:main', 'postcss:autoprefixer', 'postcss:nano', 
+    'usebanner:full', 'usebanner:compact'
+  ]);
+  grunt.registerTask('build-legacy', [
+    'less:main', 'postcss:autoprefixer-legacy', 'postcss:nano',
+    'usebanner:legacyfull', 'usebanner:legacycompact', 
+  ]);
+  grunt.registerTask('dev', [
+    'watch'
+  ]);
   
 }

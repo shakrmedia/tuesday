@@ -2,7 +2,7 @@
   "name": "tuesday.less",
   "codename": "tuesday",
   "id": "tuesday",
-  "version": "1.2.3",
+  "version": "1.3.0",
   "description": "A quirky CSS Animation Library by Shakr.",
   "keywords": [
     "tuesday",
@@ -11,22 +11,28 @@
     "library",
     "animation"
   ],
+  "browserslist": [
+    "defaults"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ShakrMedia/tuesday/"
   },
-  "homepage": "http://shakrmedia.github.io/tuesday",
+  "homepage": "https://shakrmedia.github.io/tuesday",
   "license": "MIT",
   "author": {
     "name": "Shakr Media Co., Ltd.",
     "url": "http://www.shakr.com"
   },
   "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "cssnano": "^4.1.10",
     "grunt": "^1.0.4",
-    "grunt-autoprefixer": "~2.2.0",
+    "grunt-banner": "~0.6.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
     "load-grunt-tasks": "^3.1.0"
   }
 }
