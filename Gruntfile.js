@@ -105,7 +105,7 @@ module.exports = function(grunt) {
           banner: '<%= meta.banner %>'
         },
         src: [
-          "build/<%= pkg.codename %>.css"
+          "build/tuesday.css"
         ]
       },
       compact: {
@@ -113,7 +113,7 @@ module.exports = function(grunt) {
           banner: '<%= meta.banner_compact %>'
         },
         src: [
-          "build/<%= pkg.codename %>.min.css",
+          "build/tuesday.min.css",
         ]
       },
       legacyfull: {
@@ -121,7 +121,7 @@ module.exports = function(grunt) {
           banner: '<%= meta.banner_legacy %>'
         },
         src: [
-          "build/<%= pkg.codename %>.legacy.css"
+          "build/tuesday.legacy.css"
         ]
       },
       legacycompact: {
@@ -129,7 +129,7 @@ module.exports = function(grunt) {
           banner: '<%= meta.banner_legacy_compact %>'
         },
         src: [
-          "build/<%= pkg.codename %>.legacy.min.css",
+          "build/tuesday.legacy.min.css",
         ]
       },
     },
@@ -144,15 +144,16 @@ module.exports = function(grunt) {
   });
   
   grunt.registerTask('default', [
-    'build', 'build-legacy'
+    'build-all'
   ]);
 
   grunt.registerTask('build', [
     'less:main', 'postcss:autoprefixer', 'postcss:nano', 
     'usebanner:full', 'usebanner:compact'
   ]);
-  grunt.registerTask('build-legacy', [
-    'less:main', 'postcss:autoprefixer-legacy', 'postcss:nano',
+  grunt.registerTask('build-all', [
+    'less:main', 'postcss:autoprefixer', 'postcss:autoprefixer-legacy', 'postcss:nano',
+    'usebanner:full', 'usebanner:compact',
     'usebanner:legacyfull', 'usebanner:legacycompact', 
   ]);
   grunt.registerTask('dev', [
