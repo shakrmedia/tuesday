@@ -19,33 +19,61 @@ module.exports = function(grunt) {
     less: {
       main: {
         expand: true,
-        src: ["tuesday.less", "demo.less"],
-        ext: ".css",
-        dest: "build"
+        flatten: true,
+        files: [
+          { src: ["less/tuesday.less"], dest: "build/tuesday.css" },
+          { src: ["less/demo.less"], dest: "build/demo.css" }
+        ]
       }
     },
 
-    // Autoprefixer
-    autoprefixer: {
-      options: {
-        browser: ["last 3 versions", "ie 10"]
+    // postcss
+    postcss: {
+      // autoprefixer
+      autoprefixer: {
+        options: {
+          processors: [
+            require('autoprefixer')()
+          ]
+        },
+        files: [
+          { src: 'build/tuesday.css', dest: 'build/tuesday.css' }
+        ]
       },
-      build: {
-        expand: true,
-        cwd: "build",
-        src: ["tuesday.css"],
-        dest: "build"
+      // autoprefixer with legacy browser support
+      'autoprefixer-legacy': {
+        options: {
+          processors: [
+            require('autoprefixer')({
+              overrideBrowserslist: ["last 3 versions", "not dead", "IE 10"]
+            })
+          ]
+        },
+        files: [
+          { src: 'build/tuesday.css', dest: 'build/tuesday.legacy.css' }
+        ]
+      },
+      // cssnano
+      nano: {
+        options: {
+          processors: [
+            require('cssnano')({
+              autoprefixer: false
+            })
+          ]
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'build/',
+            src: ['tuesday.css','tuesday.legacy.css'],
+            dest: 'build/',
+            ext: '.min.css',
+            extDot: 'last'
+          }
+        ]
       }
     },
-
-    // css minify
-    cssmin: {
-      minify: {
-        src: "build/tuesday.css",
-        dest: "build/tuesday.min.css"
-      }
-    },
-
 
     // watch
     watch: {
@@ -56,7 +84,10 @@ module.exports = function(grunt) {
     }
   });
   
-  grunt.registerTask('default', ['less', 'autoprefixer', 'cssmin']);
+  grunt.registerTask('default', ['build', 'build-legacy']);
+
+  grunt.registerTask('build', ['less:main', 'postcss:autoprefixer', 'postcss:nano']);
+  grunt.registerTask('build-legacy', ['less:main', 'postcss:autoprefixer-legacy', 'postcss:nano']);
   grunt.registerTask('dev', ['watch']);
   
 }

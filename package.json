@@ -11,6 +11,9 @@
     "library",
     "animation"
   ],
+  "browserslist": [
+    "defaults"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/ShakrMedia/tuesday/"
@@ -22,11 +25,13 @@
     "url": "http://www.shakr.com"
   },
   "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "cssnano": "^4.1.10",
     "grunt": "^1.0.4",
-    "grunt-autoprefixer": "~2.2.0",
     "grunt-contrib-cssmin": "^3.0.0",
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
+    "grunt-postcss": "^0.9.0",
     "load-grunt-tasks": "^3.1.0"
   }
 }
