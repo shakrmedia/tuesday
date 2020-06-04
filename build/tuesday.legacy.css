@@ -1,7 +1,11 @@
-/* ======================================== */
-/* ==== tuesday.less ====================== */
-/* ==== A quirky CSS Animation Library ==== */
-/* ======================================== */
+/* 
+ * tuesday.less v1.3.0 - 2020-06-04 
+ * (Legacy Compat) 
+ * A quirky CSS Animation Library by Shakr. 
+ * https://shakrmedia.github.io/tuesday 
+ * 
+ * Copyright 2020 Shakr Media Co., Ltd.; MIT License 
+ */
 .animated {
   -webkit-animation-duration: 0.3s;
           animation-duration: 0.3s;
