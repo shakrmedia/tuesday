@@ -1,0 +1,26 @@
+@import 'easing';
+
+// Basic Fades
+@mixin tdFadeIn {
+	@keyframes tdFadeIn {
+	    0% { 
+	        opacity: 0;
+	    }
+
+	    100% { 
+	        opacity: 1;
+	    }
+	}
+}
+
+@mixin tdFadeOut {
+	@keyframes tdFadeOut {
+	    0% { 
+	        opacity: 1;
+	    }
+
+	    100% { 
+	        opacity: 0;
+	    }
+	}
+}
