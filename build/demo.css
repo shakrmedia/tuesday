@@ -62,7 +62,6 @@ body {
   height: 100%;
   font-family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif;
   display: table;
-  overflow: hidden;
 }
 /* main style start */
 #page {
