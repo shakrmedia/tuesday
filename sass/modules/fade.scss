@@ -1,0 +1,125 @@
+@import 'easing';
+
+// Fading Entrances
+@mixin tdFadeInDown {
+	@keyframes tdFadeInDown {
+	    0% { 
+	        opacity: 0;
+	        transform: translateY(-10px);
+	        animation-timing-function: $easeOutCirc;
+	    }
+
+	    100% { 
+	        opacity: 1;
+	        transform: translateY(0);
+	    }
+	}
+}
+
+@mixin tdFadeInLeft {
+	@keyframes tdFadeInLeft {
+	    0% { 
+	        opacity: 0;
+	        transform: translateX(10px);
+	        animation-timing-function: $easeOutCirc;
+	    }
+
+	    100% { 
+	        opacity: 1;
+	        transform: translateX(0);
+	    }
+	}
+}
+
+@mixin tdFadeInUp {
+	@keyframes tdFadeInUp {
+	    0% { 
+	        opacity: 0;
+	        transform: translateY(10px);
+	        animation-timing-function: $easeOutCirc;
+	    }
+
+	    100% { 
+	        opacity: 1;
+	        transform: translateY(0);
+	    }
+	}
+}
+
+@mixin tdFadeInRight {
+	@keyframes tdFadeInRight {
+	    0% { 
+	        opacity: 0;
+	        transform: translateX(-10px);
+	        animation-timing-function: $easeOutCirc;
+	    }
+
+	    100% { 
+	        opacity: 1;
+	        transform: translateX(0);
+	    }
+	}
+}
+
+
+// Fading Exits
+@mixin tdFadeOutUp {
+	@keyframes tdFadeOutUp {
+	    0% { 
+	        opacity: 1;
+	        transform: translateY(0);
+	        animation-timing-function: $easeOutCirc;
+	    }
+
+	    100% { 
+	        opacity: 0;
+	        transform: translateY(-10px);
+	    }
+	}
+}
+
+@mixin tdFadeOutRight {
+	@keyframes tdFadeOutRight {
+	    0% { 
+	        opacity: 1;
+	        transform: translateX(0);
+	        animation-timing-function: $easeOutCirc;
+	    }
+
+	    100% { 
+	        opacity: 0;
+	        transform: translateX(10px);
+	    }
+	}
+}
+
+@mixin tdFadeOutDown {
+	@keyframes tdFadeOutDown {
+	    0% { 
+	        opacity: 1;
+	        transform: translateY(0);
+	        animation-timing-function: $easeOutCirc;
+	    }
+
+	    100% { 
+	        opacity: 0;
+	        transform: translateY(10px);
+	    }
+	}
+}
+
+@mixin tdFadeOutLeft {
+	@keyframes tdFadeOutLeft {
+	    0% { 
+	        opacity: 1;
+	        transform: translateX(0);
+	        animation-timing-function: $easeOutCirc;
+	    }
+
+	    100% { 
+	        opacity: 0;
+	        transform: translateX(-10px);
+	    }
+	}
+}
+

@@ -46,6 +46,22 @@ module.exports = function(grunt) {
       }
     },
 
+    // Sass
+    'dart-sass': {
+        options: {
+            sourceMap: false
+        },
+        main: {
+          files: [{
+            expand: true,
+            flatten: true,
+            src: ["sass/tuesday.scss"],
+            ext: ".css",
+            dest: "build-sass"
+          }]
+        }
+    },
+
     // postcss
     postcss: {
       // autoprefixer
@@ -155,6 +171,10 @@ module.exports = function(grunt) {
     'less:main', 'postcss:autoprefixer', 'postcss:autoprefixer-legacy', 'postcss:nano',
     'usebanner:full', 'usebanner:compact',
     'usebanner:legacyfull', 'usebanner:legacycompact', 
+  ]);
+  grunt.registerTask('build-sass', [
+    'dart-sass', 
+    'postcss:autoprefixer', 'postcss:nano'
   ]);
   grunt.registerTask('dev', [
     'watch'

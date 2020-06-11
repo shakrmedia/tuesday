@@ -1,0 +1,62 @@
+// ======================================== //
+// ==== tuesday.scss ====================== //
+// ==== A quirky CSS Animation Library ==== //
+// ==== (Sass Version) ==================== //
+// ======================================== //
+
+@import 'modules/easing';
+@import 'modules/mixins';
+
+// load animation modules
+@import 'modules/basic-fade';
+@import 'modules/fade';
+@import 'modules/drop';
+@import 'modules/hinge-flip';
+@import 'modules/plop';
+@import 'modules/stamp';
+@import 'modules/swing';
+@import 'modules/zoom-expand';
+@import 'modules/zoom-shrink';
+
+.animated {
+	@include tdAnimated;
+}
+
+// output keyframes
+@include tdFadeIn;
+@include tdFadeOut;
+
+@include tdFadeInDown;
+@include tdFadeInLeft;
+@include tdFadeInUp;
+@include tdFadeInRight;
+@include tdFadeOutUp;
+@include tdFadeOutRight;
+@include tdFadeOutDown;
+@include tdFadeOutLeft;
+
+@include tdHingeFlipIn;
+@include tdHingeFlipOut;
+
+@include tdDropInLeft;
+@include tdDropInRight;
+
+@include tdPlopIn;
+@include tdPlopInDown;
+@include tdPlopInUp;
+
+@include tdExpandIn;
+@include tdExpandInBounce;
+@include tdExpandOut;
+@include tdExpandOutBounce;
+
+@include tdShrinkIn;
+@include tdShrinkInBounce;
+@include tdShrinkOut;
+@include tdShrinkOutBounce;
+
+@include StampIn;
+@include StampInSwing;
+
+@include SwingIn;
+@include SwingOut;
